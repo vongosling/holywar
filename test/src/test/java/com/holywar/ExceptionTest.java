@@ -15,6 +15,8 @@
  */
 package com.holywar;
 
+import org.junit.Test;
+
 /**
  * @author vongosling.fengj 2011-11-1 10:30:54
  */
@@ -37,17 +39,6 @@ public class ExceptionTest {
 			throw new EnrichableException(errorContext, errorCode, errorText);
 		}
 	};
-
-	public static void main(String[] args) {
-
-		ExceptionTest test = new ExceptionTest();
-
-		try {
-			test.level1();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	public void level1() {
 		try {
@@ -79,6 +70,18 @@ public class ExceptionTest {
 
 	public void level4() {
 		throw new IllegalArgumentException("incorrect argument passed!");
+	}
+
+	@Test
+	public void run() {
+
+		ExceptionTest test = new ExceptionTest();
+
+		try {
+			test.level1();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

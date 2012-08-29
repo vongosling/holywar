@@ -40,7 +40,6 @@
 		<cobertura.report.format>xml</cobertura.report.format>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 
-		<jetty-version>6.1.22</jetty-version>
 	</properties>
 
 	<dependencyManagement>
